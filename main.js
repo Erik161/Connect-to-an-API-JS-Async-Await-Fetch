@@ -17,10 +17,19 @@ const cargarPeliculas= async() =>{
    -When we use the fetch function we return a promise.
    -The AWAIT operator is used to wait for a PROMISE and can only be used within an ASYNC function.
    -It verifies the parameters you need to be able to make the request.
-   */    
-   const respuesta = await fetch('https://api.themoviedb.org/3/movie/550?api_key=be712d905546d6908c79fab28d8f4180&language=es-GT');
+   -When we use Asynchronous functions, we should work with Try and catch to also be able to catch an error in the request.
+   */   
+  
+   try{
+    const respuesta = await fetch('https://api.themoviedb.org/3/movie/550?api_key=be712d905546d6908c79fab28d8f4180&language=es-GT');
+    console.log(respuesta);
+   }catch(error){
+    console.log(error)
+   }
 
-   console.log(respuesta);
+
+
+   
 }
 
 cargarPeliculas();
