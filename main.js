@@ -1,4 +1,8 @@
 
+/*
+ ** Functions to navigate back and forth to the next page
+*/
+
 let pagina = 1;
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
@@ -12,6 +16,20 @@ btnSiguiente.addEventListener('click', () =>{
     cargarPeliculas();
   }
 });
+
+
+
+btnAnterior.addEventListener('click', ()=>{
+  /*Here I am asking if I am on a page that is larger than one. */ 
+  if(pagina>1){
+    /*So I want to be able to delete a unit */ 
+    pagina -=1;
+    /*And I reload the movie again*/ 
+    cargarPeliculas();
+
+  }
+
+})
 
 
 
@@ -76,9 +94,6 @@ const cargarPeliculas= async() =>{
       console.log(error)
    }
 
-
-
-   
 }
 
 cargarPeliculas();
