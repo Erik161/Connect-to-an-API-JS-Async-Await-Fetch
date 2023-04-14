@@ -1,6 +1,6 @@
 <div align="center">
 
-# Connect-to-an-API-JS-Async-Await-Fetch 
+# Connect-to-an-API-JS-Async-Await-Fetch [:arrow_right: PREVIEW](https://connect-to-an-api-js-async-await-fetch.vercel.app/)
 
 ## Connecting to ThemovieDB API [:arrow_right: https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction) 
 
