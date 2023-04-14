@@ -1,4 +1,21 @@
 
+let pagina = 1;
+const btnAnterior = document.getElementById('btnAnterior');
+const btnSiguiente = document.getElementById('btnSiguiente');
+
+btnSiguiente.addEventListener('click', () =>{
+  /*A conditional is added to determine if the page is less than 1000. If we are on page 1000, we do not want to continue adding because we have reached the last page.*/ 
+  if(pagina<1000){
+     /*I want to access the "pagina" variable that defaults to page 1, and I want to add 1 to the current page.*/
+    pagina += 1;
+    /*I want to execute the function that retrieves the data*/ 
+    cargarPeliculas();
+  }
+});
+
+
+
+
 /*
  ** STEPS TO CONNECT AN API
 */
@@ -21,7 +38,7 @@ const cargarPeliculas= async() =>{
    /*-When we use Asynchronous functions, we should work with Try and catch to also be able to catch an error in the request.*/ 
    try{
 
-      const respuesta = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=be712d905546d6908c79fab28d8f4180&language=es-GT');
+      const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=be712d905546d6908c79fab28d8f4180&language=es-GT&page=${pagina}`);
       console.log(respuesta);
 
 
